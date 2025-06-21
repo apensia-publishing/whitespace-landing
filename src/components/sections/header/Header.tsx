@@ -51,13 +51,15 @@ export default function Header(): React.JSX.Element {
           setHamburgerOpen={setHamburgerOpen}
         />
         <ul
-          className={`${style.menu_wrapper} ${hamburgerOpen ? style.open : ""}`}
+          className={`${
+            desktop ? style.menu_wrapper_desktop : style.menu_wrapper
+          } ${hamburgerOpen ? style.open : style.close}`}
         >
           <button
             className={style.close_btn}
             onClick={() => setHamburgerOpen(false)}
           >
-            <img src={close} alt="Close icon" className={style.close} />
+            <img src={close} alt="Close icon" />
           </button>
           {menuData.map((i) => (
             <li key={i.id}>
@@ -65,9 +67,9 @@ export default function Header(): React.JSX.Element {
             </li>
           ))}
         </ul>
-        <li className={style.start_now_btn}>
-          <Link to="/">Start Now</Link>
-        </li>
+        <Link to="/" className={style.start_now_btn}>
+          Start Now
+        </Link>
       </div>
     </header>
   );
