@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import style from "./Header.module.css";
 import mainLogo from "../../../assets/images/main_logo.svg";
 import close from "../../../assets/icons/close.svg";
-import { Link } from "react-router";
 import useMediaQuery from "../../../hooks/useMediaQuery";
 
 type HamburgerButtonProps = {
@@ -28,7 +27,8 @@ export default function Header(): React.JSX.Element {
   const desktop = useMediaQuery("(min-width: 1024px)");
   const menuData = [
     { id: "home", text: "Home" },
-    { id: "features", text: "Features" },
+    { id: "benefits", text: "Benefits" },
+    { id: "faq", text: "FAQ" },
     { id: "news", text: "News" },
     { id: "contact", text: "Contact" },
   ];
@@ -41,10 +41,10 @@ export default function Header(): React.JSX.Element {
 
   return (
     <header className={style.header}>
-      <Link to="/" className={style.logo_wrapper}>
+      <a href="/" className={style.logo_wrapper}>
         <img src={mainLogo} alt="Main logo" />
         <span className={style.logo_text}>Whitespace AI</span>
-      </Link>
+      </a>
       <div className={style.menu_container}>
         <HamburgerButton
           hamburgerOpen={hamburgerOpen}
@@ -63,13 +63,13 @@ export default function Header(): React.JSX.Element {
           </button>
           {menuData.map((i) => (
             <li key={i.id}>
-              <Link to={`/${i.id}`}>{i.text}</Link>
+              <a href={`#${i.id}`}>{i.text}</a>
             </li>
           ))}
         </ul>
-        <Link to="/" className={style.start_now_btn}>
+        <a href="/" className={style.start_now_btn}>
           Start Now
-        </Link>
+        </a>
       </div>
     </header>
   );

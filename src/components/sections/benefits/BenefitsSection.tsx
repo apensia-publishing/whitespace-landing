@@ -32,7 +32,7 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section className={style.benefits_container}>
+    <section id="benefits" className={style.benefits_container}>
       <div className={style.title_wrapper}>
         <span className={style.title_prefix}>Our Features</span>
         <h1 className={style.title}>Our key benefits</h1>

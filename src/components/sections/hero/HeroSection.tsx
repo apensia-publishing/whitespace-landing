@@ -3,7 +3,7 @@ import heroImg from "../../../assets/images/hero.png";
 
 export default function HeroSection(): React.JSX.Element {
   return (
-    <section id="hero" className={style.section_container}>
+    <section id="home" className={style.section_container}>
       <div className={style.left}>
         <div className={style.text_wrapper}>
           <h1 className={style.hero_title}>
