@@ -35,7 +35,11 @@ export default function Accordion({
           </button>
         )}
       </div>
-      <div className={style.content_wrapper}>
+      <div
+        className={`${style.content_wrapper} ${
+          accordionOpen ? style.open : style.close
+        }`}
+      >
         <p className={style.content}>{content}</p>
       </div>
     </div>
