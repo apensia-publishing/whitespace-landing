@@ -1,0 +1,32 @@
+.faq_container {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  gap: 7em;
+}
+
+.faq_container .title_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+}
+
+.faq_container .title_wrapper .title {
+  font-size: 3.6rem;
+  font-weight: 600;
+}
+
+.faq_container .title_wrapper .sub_title {
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.faq_container .accordion_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}

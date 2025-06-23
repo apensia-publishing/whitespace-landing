@@ -3,6 +3,7 @@ import Header from "./components/sections/header/Header";
 import HeroSection from "./components/sections/hero/HeroSection";
 import BenefitsSection from "./components/sections/benefits/BenefitsSection";
 import GetStartedSection from "./components/sections/get_started/GetStartedSection";
+import FAQSection from "./components/sections/faq/FAQSection";
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       <HeroSection />
       <BenefitsSection />
       <GetStartedSection />
+      <FAQSection />
     </div>
   );
 }
