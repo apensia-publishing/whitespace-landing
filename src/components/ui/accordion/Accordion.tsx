@@ -12,7 +12,6 @@ type AccordionProps = {
 export default function Accordion({
   title,
   content,
-  currentIndex,
 }: AccordionProps & React.HTMLAttributes<HTMLDivElement>) {
   const [accordionOpen, setAccordionOpen] = useState<boolean>(false);
   console.log(accordionOpen);

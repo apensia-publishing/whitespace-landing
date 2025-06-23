@@ -29,7 +29,7 @@ export default function Header(): React.JSX.Element {
     { id: "home", text: "Home" },
     { id: "benefits", text: "Benefits" },
     { id: "faq", text: "FAQ" },
-    { id: "news", text: "News" },
+    { id: "clients", text: "Clients" },
     { id: "contact", text: "Contact" },
   ];
 
